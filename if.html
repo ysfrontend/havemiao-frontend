@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>条件语句</title>
+    <!-- 开发环境版本，包含了用帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="demo">
+    <p v-if="result">result is true</p>
+    <p v-else>result is false</p>
+    <p v-show="show">显示</p>
+</div>
+</body>
+<script>
+    var demo = new Vue({
+        el:"#demo",
+        data:{
+            result:false,
+            show:false
+        }
+    });
+</script>
+</html>

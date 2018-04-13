@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表渲染</title>
+    <!-- 开发环境版本，包含了用帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="demo">
+    <ul v-for="(item,index) in list">
+        <li v-bind:name="item.name">{{ item.message }}-{{ index }}</li>
+    </ul>
+    <ul v-for="(value,key) in object">
+        <li>{{ key }}:{{ value }}</li>
+    </ul>
+</div>
+</body>
+<script>
+    var demo = new Vue({
+        el:"#demo",
+        data:{
+            list:[
+                {"name":"zhansgan","message":"zhansgan-message"},
+                {"name":"lisi","message":"lisi-message"},
+            ],
+            object:{
+                "name":"张三",
+                "AGE":20,
+                "address":"广东省深圳市"
+            }
+        }
+    });
+</script>
+</html>
